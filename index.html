@@ -3,79 +3,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AXIOMIQ | Premium Digital Infrastructure</title>
-    <link rel="stylesheet" href="style.css">
+    <title>AXIOMIQ | Advanced Digital Infrastructure</title>
+    
+    <meta name="description" content="AXIOMIQ provides premium websites, fintech solutions, and business systems to businesses in Botswana and beyond.">
+    <meta name="author" content="AXIOMIQ Digital Innovations">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="container nav-content">
-            <a href="index.html" class="logo">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z"></path><circle cx="12" cy="12" r="3" fill="currentColor"></circle></svg>
-                AXIOMIQ
-            </a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="services.html">Services</a>
-                <a href="pulatrack.html">PulaTrack</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="about.html">About</a>
-                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Start Project</a>
-            </div>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
-    </nav>
 
-    <!-- HERO -->
-    <section class="section-padding" style="padding-top: 180px; text-align: center; position: relative;">
-        <div class="container reveal">
-            <div style="display: inline-block; padding: 6px 16px; border-radius: 50px; border: 1px solid rgba(0,229,255,0.3); background: rgba(0,229,255,0.1); color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 24px;">
-                Engineering Excellence. Made in Botswana.
-            </div>
-            <h1 style="font-size: 4.5rem; margin-bottom: 24px;">Moving Business <br><span class="text-primary">Forward.</span></h1>
-            <p class="text-muted" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 40px;">
-                We build secure, intelligent digital infrastructure for ambitious brands. From custom enterprise systems to fintech innovation.
-            </p>
-            <div style="display: flex; gap: 16px; justify-content: center;">
-                <a href="services.html" class="btn btn-primary">Explore Capabilities</a>
-                <a href="pulatrack.html" class="btn btn-outline">View PulaTrack</a>
-            </div>
-        </div>
-    </section>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" aria-label="AXIOMIQ Home">
+                        <span class="logo-text">AXIOMIQ</span>
+                        <span class="logo-tagline">Advanced X Intelligence Operations Model Intelligence Quotient</span>
+                    </a>
+                </div>
 
-    <!-- QUICK SERVICES -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="reveal text-center" style="margin-bottom: 60px;">
-                <h2 style="font-size: 2.5rem;">World-Class Digital Solutions</h2>
-                <p class="text-muted">We handle everything from the first line of code to full-scale deployment.</p>
-            </div>
-            <div class="grid-3">
-                <div class="glass reveal" style="padding: 40px;">
-                    <h3 style="margin-bottom: 12px;">Custom Web Apps</h3>
-                    <p class="text-muted" style="font-size: 0.95rem;">High-performance, scalable web applications built with modern frameworks.</p>
-                </div>
-                <div class="glass reveal" style="padding: 40px;">
-                    <h3 style="margin-bottom: 12px;">Business Systems</h3>
-                    <p class="text-muted" style="font-size: 0.95rem;">Custom ERPs, CRMs, and POS solutions tailored to your exact operations.</p>
-                </div>
-                <div class="glass reveal" style="padding: 40px;">
-                    <h3 style="margin-bottom: 12px;">Fintech & AI</h3>
-                    <p class="text-muted" style="font-size: 0.95rem;">Secure payment gateways, intelligent automation, and data analytics.</p>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Our Work</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary nav-cta">
+                            <i class="fas fa-paper-plane"></i> Start Project
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="hamburger" id="hamburger" aria-label="Toggle Menu" role="button" tabindex="0">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
-            <div class="text-center reveal" style="margin-top: 40px;">
-                <a href="services.html" class="text-primary" style="font-weight: 600;">View all services →</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-grid">
+                        <div class="hero-text">
+                            <span class="hero-badge">🇧🇼 Proudly Built in Botswana</span>
+                            <h1 class="hero-title">
+                                Moving Business <br>Forward with <span class="highlight">AXIOMIQ</span>
+                            </h1>
+                            <p class="hero-subtitle">
+                                We engineer secure, intelligent digital infrastructure for ambitious brands. From custom enterprise systems to fintech innovation.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="services.html" class="btn btn-primary btn-large">
+                                    <i class="fas fa-rocket"></i> Explore Services
+                                </a>
+                                <a href="contact.html" class="btn btn-secondary btn-large">
+                                    <i class="fas fa-comment"></i> Get a Quote
+                                </a>
+                            </div>
+                            <div class="hero-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">6+</span>
+                                    <span class="stat-label">Core Services</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">1</span>
+                                    <span class="stat-label">Live Fintech App</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">100%</span>
+                                    <span class="stat-label">Secure Architecture</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" 
+                                 alt="Secure technology infrastructure" loading="lazy">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- SERVICES OVERVIEW -->
+        <section class="services-overview" id="services-overview">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">What We Build</span>
+                    <h2 class="section-title">Digital Infrastructure for <span class="highlight">Growth</span></h2>
+                    <p class="section-subtitle">
+                        We deliver complete digital solutions tailored to your business needs.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">
+                            High-performance, responsive websites and web apps built with modern frameworks. Lightning fast and visually stunning.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Custom Web Apps</li>
+                            <li><i class="fas fa-check-circle"></i> E-commerce Stores</li>
+                            <li><i class="fas fa-check-circle"></i> API Integrations</li>
+                        </ul>
+                        <a href="services.html" class="service-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="service-title">Business Systems</h3>
+                        <p class="service-description">
+                            Custom ERPs, CRMs, and POS solutions. We build the internal tools that automate your operations and scale your business.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Inventory & POS</li>
+                            <li><i class="fas fa-check-circle"></i> Custom Dashboards</li>
+                            <li><i class="fas fa-check-circle"></i> Cloud Architecture</li>
+                        </ul>
+                        <a href="services.html" class="service-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="service-title">Fintech & AI Apps</h3>
+                        <p class="service-description">
+                            Secure mobile applications with intelligent features. From payment gateways to AI-driven financial tools like PulaTrack.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check-circle"></i> Android & iOS Apps</li>
+                            <li><i class="fas fa-check-circle"></i> AI Integrations</li>
+                            <li><i class="fas fa-check-circle"></i> Biometric Security</li>
+                        </ul>
+                        <a href="services.html" class="service-link">
+                            Learn More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO TEASER -->
+        <section class="portfolio-teaser" id="portfolio-teaser">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Work</span>
+                    <h2 class="section-title">Recent <span class="highlight">Deployments</span></h2>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Mosadi Clothing Studio" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h4>Mosadi Clothing Studios</h4>
+                            <p>Premium brand website & e-commerce UI</p>
+                            <span class="portfolio-tag">Web Dev</span>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="PulaTrack App" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h4>PulaTrack Fintech</h4>
+                            <p>AI-powered smart money tracking for Botswana</p>
+                            <span class="portfolio-tag">Fintech App</span>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" alt="Jack's Gym App" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h4>Jack's Gym</h4>
+                            <p>Dedicated membership & scheduling mobile app</p>
+                            <span class="portfolio-tag">In Dev</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="portfolio.html" class="btn btn-secondary">
+                        View Full Portfolio <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE PARTNERSHIP (Why Choose AXIOMIQ) -->
+        <section class="partnership" id="partnership">
+            <div class="container">
+                <div class="partnership-grid">
+                    <div class="partnership-image">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="AXIOMIQ Engineering" loading="lazy">
+                    </div>
+                    <div class="partnership-content">
+                        <span class="section-tag">Why Choose Us</span>
+                        <h2 class="section-title">End-to-End <span class="highlight">Excellence</span></h2>
+                        <p class="partnership-description">
+                            We handle everything from the first logo sketch to the backend database. One team, one vision, and one point of accountability.
+                        </p>
+                        <div class="partnership-features">
+                            <div class="pf-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>Security First</h4>
+                                    <p>Authentication and data protection designed in from day one.</p>
+                                </div>
+                            </div>
+                            <div class="pf-item">
+                                <i class="fas fa-brain"></i>
+                                <div>
+                                    <h4>AI Built In</h4>
+                                    <p>Modern AI features that give your business a genuine edge.</p>
+                                </div>
+                            </div>
+                            <div class="pf-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Made in Botswana</h4>
+                                    <p>World-class technology for local problems, in your time zone.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section" id="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Move <span class="highlight">Forward?</span></h2>
+                    <p class="cta-description">
+                        Let's discuss how we can engineer your digital infrastructure. Pricing is shared upon request based on project scope.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-envelope"></i> Contact Us Today
+                        </a>
+                        <a href="https://wa.me/26772706831" target="_blank" class="btn btn-secondary btn-large">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 AXIOMIQ Digital Innovations (Pty) Ltd. Tlokweng, Gaborone, Botswana.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">AXIOMIQ</span>
+                        <span class="logo-tagline">Advanced X Intelligence Operations Model Intelligence Quotient</span>
+                    </div>
+                    <p class="footer-description">
+                        Premium digital infrastructure, proudly engineered in Botswana. Moving Business Forward.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">Business Systems</a></li>
+                        <li><a href="services.html">Mobile Apps</a></li>
+                        <li><a href="services.html">Fintech & AI</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:axiomiqdigitalinnovations@gmail.com">axiomiqdigitalinnovations@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+26772706831">+267 72 706 831</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tlokweng, Gaborone, Botswana</span></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/26772706831">Chat on WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 AXIOMIQ Digital Innovations (Pty) Ltd. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
