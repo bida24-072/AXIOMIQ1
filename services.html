@@ -3,74 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | AXIOMIQ</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Services - AXIOMIQ</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="container nav-content">
-            <a href="index.html" class="logo">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z"></path><circle cx="12" cy="12" r="3" fill="currentColor"></circle></svg>
-                AXIOMIQ
-            </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="services.html" class="active">Services</a>
-                <a href="pulatrack.html">PulaTrack</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="about.html">About</a>
-                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Start Project</a>
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" aria-label="AXIOMIQ Home">
+                        <span class="logo-text">AXIOMIQ</span>
+                        <span class="logo-tagline">Advanced X Intelligence Operations Model Intelligence Quotient</span>
+                    </a>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Our Work</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary nav-cta"><i class="fas fa-paper-plane"></i> Start Project</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger" aria-label="Toggle Menu" role="button" tabindex="0">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <section class="section-padding" style="padding-top: 160px;">
-        <div class="container">
-            <div class="reveal" style="margin-bottom: 60px;">
-                <h1 style="font-size: 3.5rem; margin-bottom: 16px;">Digital Excellence, <br>End to End.</h1>
-                <p class="text-muted" style="font-size: 1.1rem; max-width: 600px;">We cover the entire digital journey. One accountable team, world-class execution. <br><strong style="color: white;">Pricing is customized based on project scope.</strong></p>
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-content">
+                    <span class="section-tag">Our Capabilities</span>
+                    <h1 class="page-hero-title">Digital Excellence, <span class="highlight">End to End.</span></h1>
+                    <p class="page-hero-subtitle">
+                        From a first brand identity to a full enterprise system. <strong>Pricing is available upon request based on project scope.</strong>
+                    </p>
+                </div>
             </div>
+        </section>
 
-            <div class="grid-3">
+        <section class="services-full">
+            <div class="container">
+                
                 <!-- Service 1 -->
-                <div class="glass reveal" style="padding: 32px;">
-                    <h3 class="text-primary" style="margin-bottom: 12px;">Web Development</h3>
-                    <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 20px;">High-performance corporate websites, e-commerce platforms, and custom web portals.</p>
+                <div class="service-detail" id="websites">
+                    <div class="service-detail-grid">
+                        <div class="service-detail-icon"><i class="fas fa-code"></i></div>
+                        <div>
+                            <span class="service-detail-tag">Digital</span>
+                            <h3 class="service-detail-title">Web Development</h3>
+                            <p class="service-detail-description">High-performance, responsive websites and web apps built with modern frameworks. We ensure your site is lightning-fast, visually stunning, and optimized for search engines.</p>
+                            <ul class="service-detail-list">
+                                <li><i class="fas fa-check"></i> Custom Web Applications</li>
+                                <li><i class="fas fa-check"></i> E-commerce Platforms</li>
+                                <li><i class="fas fa-check"></i> API Integrations</li>
+                                <li><i class="fas fa-check"></i> SEO Optimization</li>
+                            </ul>
+                            <div class="service-detail-pricing">
+                                <span class="price-label">Pricing:</span> <span class="price-amount">Shared upon request</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <!-- Service 2 -->
-                <div class="glass reveal" style="padding: 32px;">
-                    <h3 class="text-primary" style="margin-bottom: 12px;">Enterprise Systems</h3>
-                    <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 20px;">Custom ERPs, CRM dashboards, and internal tools designed to automate workflows.</p>
+                <div class="service-detail" id="systems">
+                    <div class="service-detail-grid reverse">
+                        <div>
+                            <span class="service-detail-tag">Enterprise</span>
+                            <h3 class="service-detail-title">Business Systems (ERP/CRM)</h3>
+                            <p class="service-detail-description">Custom back-office systems designed to streamline your operations. We build ERPs, CRMs, and internal tools shaped around how your business actually runs.</p>
+                            <ul class="service-detail-list">
+                                <li><i class="fas fa-check"></i> Point of Sale (POS) Systems</li>
+                                <li><i class="fas fa-check"></i> Inventory Management</li>
+                                <li><i class="fas fa-check"></i> Booking & Scheduling Apps</li>
+                                <li><i class="fas fa-check"></i> Custom Admin Dashboards</li>
+                            </ul>
+                            <div class="service-detail-pricing">
+                                <span class="price-label">Pricing:</span> <span class="price-amount">Shared upon request</span>
+                            </div>
+                        </div>
+                        <div class="service-detail-icon"><i class="fas fa-server"></i></div>
+                    </div>
                 </div>
+
                 <!-- Service 3 -->
-                <div class="glass reveal" style="padding: 32px;">
-                    <h3 class="text-primary" style="margin-bottom: 12px;">Mobile App Dev</h3>
-                    <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 20px;">Native and cross-platform iOS & Android applications with secure architecture.</p>
+                <div class="service-detail" id="mobile">
+                    <div class="service-detail-grid">
+                        <div class="service-detail-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div>
+                            <span class="service-detail-tag">Mobile</span>
+                            <h3 class="service-detail-title">Mobile App Development</h3>
+                            <p class="service-detail-description">Native and cross-platform iOS & Android applications with secure, offline-first architecture. Built for performance and seamless user experience.</p>
+                            <ul class="service-detail-list">
+                                <li><i class="fas fa-check"></i> React Native / Flutter Apps</li>
+                                <li><i class="fas fa-check"></i> Offline-First Capabilities</li>
+                                <li><i class="fas fa-check"></i> Push Notifications</li>
+                                <li><i class="fas fa-check"></i> App Store Deployment</li>
+                            </ul>
+                            <div class="service-detail-pricing">
+                                <span class="price-label">Pricing:</span> <span class="price-amount">Shared upon request</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <!-- Service 4 -->
-                <div class="glass reveal" style="padding: 32px;">
-                    <h3 class="text-primary" style="margin-bottom: 12px;">POS & Retail Tech</h3>
-                    <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 20px;">Smart point-of-sale solutions, inventory tracking, and hospitality systems.</p>
+                <div class="service-detail" id="fintech">
+                    <div class="service-detail-grid reverse">
+                        <div>
+                            <span class="service-detail-tag">Fintech & AI</span>
+                            <h3 class="service-detail-title">Fintech & AI Integration</h3>
+                            <p class="service-detail-description">Secure payment gateways, mobile money APIs, and intelligent financial tools. We build AI features that give your business a genuine edge over competitors.</p>
+                            <ul class="service-detail-list">
+                                <li><i class="fas fa-check"></i> Payment Gateway Integration</li>
+                                <li><i class="fas fa-check"></i> AI Chatbots & Coaches</li>
+                                <li><i class="fas fa-check"></i> Data Analytics & Reporting</li>
+                                <li><i class="fas fa-check"></i> Biometric Security</li>
+                            </ul>
+                            <div class="service-detail-pricing">
+                                <span class="price-label">Pricing:</span> <span class="price-amount">Shared upon request</span>
+                            </div>
+                        </div>
+                        <div class="service-detail-icon"><i class="fas fa-brain"></i></div>
+                    </div>
                 </div>
+
                 <!-- Service 5 -->
-                <div class="glass reveal" style="padding: 32px;">
-                    <h3 class="text-primary" style="margin-bottom: 12px;">Fintech Integration</h3>
-                    <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 20px;">Secure payment gateways, mobile money APIs, and intelligent financial tools.</p>
+                <div class="service-detail" id="branding">
+                    <div class="service-detail-grid">
+                        <div class="service-detail-icon"><i class="fas fa-paint-brush"></i></div>
+                        <div>
+                            <span class="service-detail-tag">Design</span>
+                            <h3 class="service-detail-title">UI/UX & Brand Identity</h3>
+                            <p class="service-detail-description">Logo creation, visual identity, and cinematic user interfaces that command authority. We design the entire visual language of your brand.</p>
+                            <ul class="service-detail-list">
+                                <li><i class="fas fa-check"></i> Logo & Brand Guidelines</li>
+                                <li><i class="fas fa-check"></i> Portfolio Design</li>
+                                <li><i class="fas fa-check"></i> UI/UX Wireframing</li>
+                                <li><i class="fas fa-check"></i> Interactive Prototypes</li>
+                            </ul>
+                            <div class="service-detail-pricing">
+                                <span class="price-label">Pricing:</span> <span class="price-amount">Shared upon request</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Service 6 -->
-                <div class="glass reveal" style="padding: 32px;">
-                    <h3 class="text-primary" style="margin-bottom: 12px;">Branding & UI/UX</h3>
-                    <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 20px;">Logo design, visual identity, and cinematic user interfaces that command authority.</p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">AXIOMIQ</span>
+                        <span class="logo-tagline">Advanced X Intelligence Operations Model Intelligence Quotient</span>
+                    </div>
+                    <p class="footer-description">Premium digital infrastructure, proudly engineered in Botswana.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:axiomiqdigitalinnovations@gmail.com">axiomiqdigitalinnovations@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+26772706831">+267 72 706 831</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tlokweng, Gaborone, Botswana</span></li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="text-center reveal" style="margin-top: 60px;">
-                <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AXIOMIQ Digital Innovations (Pty) Ltd. All Rights Reserved.</p>
             </div>
         </div>
-    </section>
-
-    <footer><div class="container"><p>&copy; 2026 AXIOMIQ Digital Innovations (Pty) Ltd.</p></div></footer>
-    <script src="script.js"></script>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
