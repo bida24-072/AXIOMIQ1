@@ -3,88 +3,360 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PulaTrack | AXIOMIQ</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PulaTrack | AXIOMIQ Flagship Fintech</title>
+    
+    <meta name="description" content="PulaTrack is a budgeting and money-tracking app built for how Batswana actually spend. AI money coach, bank-ready reports, and offline-first security.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Custom CSS just for the Phone Mockup -->
+    <style>
+        .phone-mockup-wrapper {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .phone-mockup {
+            width: 320px;
+            height: 650px;
+            background-color: #000;
+            border-radius: 45px;
+            border: 8px solid #1E293B;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(139, 92, 246, 0.3);
+            z-index: 2;
+        }
+        /* Screen UI */
+        .screen {
+            background-color: #F8FAFC;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Inter', sans-serif;
+            overflow-y: auto;
+        }
+        .screen-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        .balance-card {
+            background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+            border-radius: 20px;
+            padding: 20px;
+            color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+        }
+        .balance-card h4 { color: rgba(255,255,255,0.8); font-size: 0.75rem; font-weight: 500; letter-spacing: 1px; margin-bottom: 5px; }
+        .balance-card h2 { color: white; font-size: 2rem; font-weight: 700; margin-bottom: 15px; }
+        .balance-stats { display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600; }
+        .balance-stats .in { color: #34D399; }
+        .balance-stats .out { color: #F87171; }
+        
+        .chart-card {
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        .chart-card p { font-size: 0.8rem; color: #64748B; margin-bottom: 15px; font-weight: 600; }
+        .bars { display: flex; align-items: flex-end; gap: 8px; height: 60px; }
+        .bar { flex: 1; background: rgba(139, 92, 246, 0.2); border-radius: 4px; }
+        .bar.active { background: #8B5CF6; box-shadow: 0 0 10px rgba(139, 92, 246, 0.5); }
+
+        .ai-chat {
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border: 1px solid rgba(139, 92, 246, 0.1);
+        }
+        .ai-avatar {
+            width: 36px; height: 36px;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            color: #8B5CF6; font-size: 1rem;
+        }
+        .ai-chat p { font-size: 0.75rem; color: #1E293B; line-height: 1.4; font-weight: 500; }
+
+        .glow-bg {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px; height: 400px;
+            background: #8B5CF6;
+            filter: blur(120px);
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        /* Custom list icon */
+        .feature-list li { display: flex; gap: 15px; margin-bottom: 25px; align-items: flex-start; }
+        .feature-list i { color: var(--accent); font-size: 1.5rem; margin-top: 3px; }
+        .feature-list h4 { font-size: 1.2rem; margin-bottom: 5px; }
+        .feature-list p { color: var(--gray); font-size: 0.95rem; }
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="container nav-content">
-            <a href="index.html" class="logo">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l8.66 5v10L12 22l-8.66-5V7L12 2z"></path><circle cx="12" cy="12" r="3" fill="currentColor"></circle></svg>
-                AXIOMIQ
-            </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="pulatrack.html" class="active">PulaTrack</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="about.html">About</a>
-                <a href="contact.html" class="btn btn-primary" style="padding: 10px 20px;">Start Project</a>
-            </div>
-        </div>
-    </nav>
-
-    <section class="section-padding" style="padding-top: 160px;">
-        <div class="container grid-2">
-            <!-- Text Content -->
-            <div class="reveal">
-                <div style="display: inline-block; padding: 6px 16px; border-radius: 50px; border: 1px solid rgba(0,229,255,0.3); color: var(--primary); font-size: 0.85rem; font-weight: 600; margin-bottom: 24px;">
-                    Flagship Fintech Product
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar" role="navigation" aria-label="Main Navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" aria-label="AXIOMIQ Home">
+                        <span class="logo-text">AXIOMIQ</span>
+                        <span class="logo-tagline">Advanced X Intelligence Operations Model Intelligence Quotient</span>
+                    </a>
                 </div>
-                <h1 style="font-size: 3.5rem; margin-bottom: 24px;">PulaTrack: <br>Smart Money Tracking.</h1>
-                <p class="text-muted" style="font-size: 1.1rem; margin-bottom: 32px;">
-                    Built for how Batswana actually spend. PulaTrack is a live, AI-powered budgeting app that tracks cash, mobile money, and salary cycles in real-time.
-                </p>
-                
-                <ul style="margin-bottom: 40px; display: flex; flex-direction: column; gap: 16px;">
-                    <li style="display: flex; gap: 12px;"><span class="text-primary">✓</span> <strong>AI Money Coach:</strong> Personalised advice based on your actual data.</li>
-                    <li style="display: flex; gap: 12px;"><span class="text-primary">✓</span> <strong>Bank-Ready Reports:</strong> Clean, structured reports to secure loans.</li>
-                    <li style="display: flex; gap: 12px;"><span class="text-primary">✓</span> <strong>Enterprise Security:</strong> Biometrics, OTP, and offline-first architecture.</li>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="pulatrack.html" class="nav-link active">PulaTrack</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Our Work</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary nav-cta"><i class="fas fa-paper-plane"></i> Start Project</a>
+                    </li>
                 </ul>
-
-                <a href="contact.html" class="btn btn-primary">Request a Demo</a>
+                <div class="hamburger" id="hamburger" aria-label="Toggle Menu" role="button" tabindex="0">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </div>
             </div>
+        </nav>
+    </header>
 
-            <!-- CSS Phone Mockup -->
-            <div class="reveal" style="display: flex; justify-content: center; position: relative;">
-                <div style="position: absolute; width: 300px; height: 300px; background: var(--primary); filter: blur(100px); opacity: 0.2; top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
-                
-                <div style="width: 320px; height: 650px; background: #000; border-radius: 45px; border: 8px solid #1E293B; padding: 20px; position: relative; z-index: 10; overflow: hidden;">
-                    <!-- App Header -->
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 30px;">
-                        <div style="width: 30px; height: 30px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
-                        <div style="width: 30px; height: 30px; background: var(--primary); border-radius: 50%;"></div>
-                    </div>
-                    <!-- Balance Card -->
-                    <div style="background: linear-gradient(135deg, #0052D4, #4364F7); padding: 24px; border-radius: 20px; margin-bottom: 30px;">
-                        <p style="font-size: 0.7rem; color: #A0C4FF; margin-bottom: 4px;">NET BALANCE</p>
-                        <h2 style="font-size: 2rem; margin-bottom: 20px;">P 2,536.00</h2>
-                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
-                            <span style="color: #4ADE80;">↗ P 3,250</span>
-                            <span style="color: #F87171;">↘ P 714</span>
+    <main>
+        <!-- PAGE HERO -->
+        <section class="page-hero" style="padding-bottom: 60px;">
+            <div class="container">
+                <div class="page-hero-content">
+                    <span class="section-tag" style="background: rgba(16, 185, 129, 0.2); color: #34D399; border: 1px solid rgba(16,185,129,0.3);">Flagship Fintech Product</span>
+                    <h1 class="page-hero-title">Smart Money Tracking <br>for <span class="highlight">Botswana.</span></h1>
+                    <p class="page-hero-subtitle">
+                        Built for how Batswana actually spend: cash, mobile money, salary cycles, stokvels and loans from family. 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- APP SHOWCASE -->
+        <section class="services-overview" style="padding: 80px 0;">
+            <div class="container">
+                <div class="partnership-grid">
+                    
+                    <!-- Text Content -->
+                    <div class="partnership-content">
+                        <h2 class="section-title">Your Money, <span class="highlight">Understood.</span></h2>
+                        <p class="partnership-description">
+                            PulaTrack shows you in real time where your pula went, turns it into clear budgets and forecasts, and adds an AI money coach that helps you keep more of it. PulaTrack is live and has active users.
+                        </p>
+                        
+                        <ul class="feature-list">
+                            <li>
+                                <i class="fas fa-robot"></i>
+                                <div>
+                                    <h4>AI Money Coach</h4>
+                                    <p>Ask how to save, budget, or make the most of your income and get advice based on your own data.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <div>
+                                    <h4>Bank-Ready Reports</h4>
+                                    <p>Clear, structured reports you can take straight to a bank or lender to secure funding.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-fingerprint"></i>
+                                <div>
+                                    <h4>Biometrics + OTP Security</h4>
+                                    <p>Biometric sign-in and one-time passcodes protect every account. Security first, always.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-wifi"></i>
+                                <div>
+                                    <h4>Offline-First</h4>
+                                    <p>Core features keep working when the network does not. Built for real-world connectivity.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div style="margin-top: 40px;">
+                            <a href="contact.html" class="btn btn-primary btn-large">Request a Demo</a>
                         </div>
                     </div>
-                    <!-- Chart -->
-                    <div class="glass" style="padding: 20px; margin-bottom: 20px; background: rgba(255,255,255,0.02);">
-                        <p style="font-size: 0.8rem; margin-bottom: 15px;">Income vs Expenses</p>
-                        <div style="display: flex; align-items: flex-end; gap: 8px; height: 60px;">
-                            <div style="width: 100%; height: 40%; background: rgba(0, 229, 255, 0.2); border-radius: 4px;"></div>
-                            <div style="width: 100%; height: 70%; background: rgba(0, 229, 255, 0.2); border-radius: 4px;"></div>
-                            <div style="width: 100%; height: 100%; background: var(--primary); border-radius: 4px; box-shadow: 0 0 10px var(--primary);"></div>
-                            <div style="width: 100%; height: 50%; background: rgba(0, 229, 255, 0.2); border-radius: 4px;"></div>
+
+                    <!-- Custom Phone Mockup -->
+                    <div class="phone-mockup-wrapper">
+                        <div class="glow-bg"></div>
+                        <div class="phone-mockup">
+                            <div class="screen">
+                                <!-- Fake UI Header -->
+                                <div class="screen-header">
+                                    <i class="fas fa-bars" style="color: #64748B;"></i>
+                                    <div style="font-weight: 800; color: #0F172A; font-size: 1.1rem;">PulaTrack</div>
+                                    <i class="fas fa-bell" style="color: #64748B;"></i>
+                                </div>
+                                
+                                <!-- Balance Card -->
+                                <div class="balance-card">
+                                    <h4>NET BALANCE</h4>
+                                    <h2>P 2,536.00</h2>
+                                    <div class="balance-stats">
+                                        <span class="in"><i class="fas fa-arrow-up"></i> P 3,250.00 in</span>
+                                        <span class="out"><i class="fas fa-arrow-down"></i> P 714.00 out</span>
+                                    </div>
+                                </div>
+
+                                <!-- Chart Card -->
+                                <div class="chart-card">
+                                    <p>Income vs Expenses (Last 6 months)</p>
+                                    <div class="bars">
+                                        <div class="bar" style="height: 40%;"></div>
+                                        <div class="bar" style="height: 60%;"></div>
+                                        <div class="bar" style="height: 30%;"></div>
+                                        <div class="bar active" style="height: 80%;"></div>
+                                        <div class="bar" style="height: 50%;"></div>
+                                        <div class="bar" style="height: 70%;"></div>
+                                    </div>
+                                </div>
+
+                                <!-- AI Chat Snippet -->
+                                <div class="ai-chat">
+                                    <div class="ai-avatar"><i class="fas fa-robot"></i></div>
+                                    <p><strong>AI Coach:</strong> "You spent 15% less on food this month. Keep it up! Want me to adjust your December budget?"</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- AI Chat -->
-                    <div class="glass" style="padding: 15px; display: flex; gap: 12px; align-items: center; background: rgba(0, 229, 255, 0.05);">
-                        <div style="width: 30px; height: 30px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">🤖</div>
-                        <p style="font-size: 0.75rem;">You spent 15% less on food this month. Keep it up!</p>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DEEP DIVE FEATURES GRID -->
+        <section class="portfolio-teaser" style="padding: 80px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">App Features</span>
+                    <h2 class="section-title">Built for the <span class="highlight">Motswana</span> Reality</h2>
+                    <p class="section-subtitle">We don't just build apps; we build tools that understand the local context.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Feature 1 -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                        <h3 class="service-title">Dashboard</h3>
+                        <p class="service-description">Net balance, income, expenses, and savings at a glance. See exactly where your money is moving in real-time.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="service-title">Budget & Forecast</h3>
+                        <p class="service-description">Set monthly limits and see a 3-month projection. Know exactly where you're headed before the month ends.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-comment-dots"></i></div>
+                        <h3 class="service-title">AI Money Coach</h3>
+                        <p class="service-description">A personal money coach inside the app. Ask questions and get personalised financial guidance on the spot.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer><div class="container"><p>&copy; 2026 AXIOMIQ Digital Innovations (Pty) Ltd.</p></div></footer>
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Need a Custom Fintech App?</h2>
+                    <p class="cta-description">
+                        We built PulaTrack from the ground up. If you have a digital product idea, we can engineer it, secure it, and bring it to market.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-large">
+                            <i class="fas fa-rocket"></i> Start Your Project
+                        </a>
+                        <a href="services.html" class="btn btn-secondary btn-large">
+                            <i class="fas fa-cogs"></i> Explore Services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">AXIOMIQ</span>
+                        <span class="logo-tagline">Advanced X Intelligence Operations Model Intelligence Quotient</span>
+                    </div>
+                    <p class="footer-description">Premium digital infrastructure, proudly engineered in Botswana.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pulatrack.html">PulaTrack</a></li>
+                        <li><a href="portfolio.html">Our Work</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">Business Systems</a></li>
+                        <li><a href="services.html">Mobile Apps</a></li>
+                        <li><a href="services.html">Fintech & AI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:axiomiqdigitalinnovations@gmail.com">axiomiqdigitalinnovations@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+26772706831">+267 72 706 831</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Tlokweng, Gaborone, Botswana</span></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/26772706831">Chat on WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AXIOMIQ Digital Innovations (Pty) Ltd. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
